@@ -1,3 +1,3 @@
 # CxFlow Demo Repo
 
-More config changes
+config changes
