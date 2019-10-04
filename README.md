@@ -1,3 +1,3 @@
 # CxFlow Demo Repo
 
-Fixed username for jira - try again
+Fixed tracker to use jira - try again
