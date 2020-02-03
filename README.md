@@ -1,2 +1,2 @@
 # CxFlow Master Branch
-A vulnrable site for CxFlow Demo
+A vulnerable site for CxFlow Demo
