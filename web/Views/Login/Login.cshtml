@@ -8,7 +8,7 @@
         @Html.LabelFor(m=> m.Password)
         @Html.EditorFor(m => m.Password)
         
-        <div class="error">@Html.Raw(Microsoft.Security.Application.Sanitizer.GetSafeHtmlFragment(Model.Message))</div>
+        <div class="error">@Html.Raw(Model.Message)</div>
 
         <input type="submit" value="Login" id="login">
         
