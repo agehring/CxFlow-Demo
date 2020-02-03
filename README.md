@@ -1,2 +1,2 @@
-# CxFlow Master Branch
+# CxFlow Security Branch
 A vulnerable site for CxFlow Demo
