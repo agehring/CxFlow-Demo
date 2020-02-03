@@ -1,0 +1,17 @@
+@model web.Controllers.PersonModel
+<h1>Preview</h1>
+<p>The following fields were found in your upload</p>
+<pre>
+    @Html.LabelFor(m => m.FirstName): @Html.DisplayFor(m => m.FirstName)
+    @Html.LabelFor(m => m.LastName): @Html.DisplayFor(m => m.LastName)
+    @Html.LabelFor(m => m.Email): @Html.DisplayFor(m => m.Email)
+    @Html.LabelFor(m => m.Notes): @Html.DisplayFor(m => m.Notes)
+</pre>
+
+<h2>Try Another?</h2>
+<form asp-action="preview" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <input type="file" name="file">
+        <input type="submit" value="upload" id="upload">
+    </fieldset>
+</form>

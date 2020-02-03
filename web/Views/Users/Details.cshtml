@@ -1,0 +1,40 @@
+﻿@model web.Models.Users.UserDetails
+
+@{
+    ViewData["Title"] = Model.UserName;
+}
+
+<h2>User Details</h2>
+
+<dl>
+    <dt>Id</dt>
+    <dd>@Model.Id</dd>
+    <dt>User Name</dt>
+    <dd>@Model.UserName</dd>
+    <dt>Display Name</dt>
+    <dd>@Model.DisplayName</dd>
+    <dt>Email Address</dt>
+    <dd>@Model.EmailAddress</dd>
+</dl>
+
+<div class="form-check">
+        <input type="checkbox" class="form-check-input" name="admin" id="admin-checkbox" @(Model.IsAdmin ? "checked" : "") />
+        <label for="admin-checkbox" class="form-check-label">Is Admin</label>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+        var $adminCheckbox = $('#admin-checkbox');
+
+        $adminCheckbox.click(() => {
+            $.post('@Url.Action("ToggleAdmin")', {
+                UserName: '@Model.UserName',
+                admin: $adminCheckbox.prop('checked'),
+            }).always(() => {
+                $adminCheckbox.prop('disabled', false);
+            });
+
+            $adminCheckbox.prop('disabled', true);
+        });
+    });
+</script>

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (User.HasClaim(System.Security.Claims.ClaimTypes.Role, Roles.Admin))
+{
+    <h1>Welcome Admin!</h1>
+}
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Demo links</h2>
+            <ul>
+                <li><a href="@Url.Action("Index", "Users")">User List</a></li>
+                <li><a href="@Url.Page("/History")">History</a></li>
+                <li>
+                    @Html.ActionLink("Login #2","Index", "Login")
+                </li>
+                <li>
+                    @Html.ActionLink("Upload","Index", "Upload")
+                </li>
+                <li>
+                    @Html.ActionLink("Xml", "Index", "Xml")
+                </li>
+            </ul>
+        </div>
+    </div>

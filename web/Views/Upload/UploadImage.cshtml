@@ -1,0 +1,24 @@
+@model web.Controllers.ImageUploadedModel
+<h1>Image Upload Successful</h1>
+
+<p>
+	Your profile image now looks like : <img src="@Model.Path" width="50" height="50" />
+</p>
+
+<p>
+	See it in  @Html.ActionLink("action","Profile", "Upload")
+</p>
+
+<p>
+	Want to try again?
+</p>
+<form asp-action="UploadImage" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <input type="file" name="file">
+        <input type="submit" value="upload" id="upload">
+    </fieldset>
+</form>
+
+<iframe src="/Upload/Profile" width="600px" height="400px" ></iframe>
+
+../../Views/Upload/Profile.cshtml

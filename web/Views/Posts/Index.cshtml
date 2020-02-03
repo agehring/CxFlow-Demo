@@ -1,0 +1,24 @@
+﻿@model IEnumerable<web.Entities.Post>
+
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<h2>Index</h2>
+
+@foreach (var post in Model)
+{
+    <div class="row">
+        <div class="col-xs-12">
+            @post.Html
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-8">
+            @post.Created
+        </div>
+    </div>
+
+}
+
+@Html.ActionLink("Create", "Create", new { }, new { @class = "btn btn-primary" })

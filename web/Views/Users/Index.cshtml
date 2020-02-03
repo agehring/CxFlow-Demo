@@ -1,0 +1,30 @@
+﻿@model IEnumerable<web.Models.Users.UserListItem>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h2>Users</h2>
+
+<table class="table">
+
+    <tr>
+        <th>Username</th>
+        <th>Display name</th>
+        <th>Is Admin</th>
+    </tr>
+
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>
+                <a href="@Url.Action("Details", new { UserName = user.UserName })">@user.UserName</a>
+            </td>
+            <td>
+                @Html.Raw(user.DisplayName)
+            </td>
+            <td>@user.IsAdmin</td>
+        </tr>
+    }
+
+</table>

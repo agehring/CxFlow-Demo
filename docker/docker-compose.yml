@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  beef:
+    build: ./beef/
+    ports:
+      - "3000:3000"
+    
+  db:
+    build: ./database/
+    ports:
+      - "5432:5432"
+    
+  sqlmap:
+    build: ./sqlmap/
+    stdin_open: true
+    tty: true

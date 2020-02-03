@@ -1,0 +1,22 @@
+﻿@model web.Entities.Post
+
+@{
+    ViewData["Title"] = "Create Post";
+}
+
+<h2>Create Post</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary()
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Html, "Text")
+        @Html.TextAreaFor(x => x.Html, new { @class = "form-control" })
+    </div>
+
+    <div class="row">
+        <button class="btn btn-primary col-sm-4 col-md-2 col-xs-12" type="submit">Create</button>
+        @Html.ActionLink("Cancel", "Index", new { }, new { @class = "btn col-sm-4 col-md-2 col-xs-12" })
+    </div>
+}

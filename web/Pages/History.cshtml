@@ -1,0 +1,25 @@
+﻿@page
+@model web.Pages.HistoryModel
+@{
+    ViewData["Title"] = "History";
+    Layout = "_Layout";
+}
+
+<h2>History</h2>
+
+<table class="table">
+    <tr>
+        <th><a href="?OrderBy=Location">Location</a></th>
+        <th><a href="?OrderBy=Date">Date</a></th>
+        <th><a href="?OrderBy=Amount">Amount</a></th>
+    </tr>
+
+    @foreach(var item in Model.Items)
+    {
+        <tr>
+            <td>@item.Location</td>
+            <td>@item.Date</td>
+            <td>@item.Amount</td>
+        </tr>
+    }
+</table>

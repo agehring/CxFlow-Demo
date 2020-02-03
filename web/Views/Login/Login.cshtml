@@ -1,0 +1,16 @@
+@model web.Models.Login.LoginViewModel
+<h1>Login</h1>
+
+<form asp-action="" method="POST">
+    <fieldset>
+        @Html.LabelFor(m => m.UserName)
+        @Html.EditorFor(m => m.UserName)
+        @Html.LabelFor(m=> m.Password)
+        @Html.EditorFor(m => m.Password)
+        
+        <div class="error">@Html.Raw(Model.Message)</div>
+
+        <input type="submit" value="Login" id="login">
+        
+    </fieldset>
+</form>
