@@ -2,4 +2,4 @@
 
 A vulnerable site for CxFlow Demo
 
-High Remediation - Completed
+High Remediation - Initiated
