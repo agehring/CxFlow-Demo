@@ -2,4 +2,4 @@
 
 A vulnerable site for CxFlow Demo
 
-Scan for issues - Security Branch
+Security Branch
