@@ -2,4 +2,4 @@
 
 A vulnerable site for CxFlow Demo
 
-run test
+Cleanup
